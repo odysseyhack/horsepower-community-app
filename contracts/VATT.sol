@@ -1,4 +1,5 @@
 pragma solidity ^0.5.2;
+
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Capped.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
@@ -34,5 +35,12 @@ contract VATT is ERC20Detailed, ERC20Capped, Ownable {
         returns(bool)
     {
         super._mint(account, value);
+    }
+
+    function burn(address account, uint256 value)
+        public  
+        onlyOwner
+    {
+        super._burn(account, value);
     }
 }
