@@ -6,8 +6,9 @@ import {
   FormGroup,
   Container,
   Row,
-  Col,
 } from 'react-bootstrap';
+
+import withAuthentication from '../utils/withAuthentication';
 
 const PreferencesConnect = () => (
   <Jumbotron>
@@ -55,4 +56,4 @@ const Preferences = () => (
   </>
 );
 
-export default Preferences;
+export default withAuthentication(Preferences);

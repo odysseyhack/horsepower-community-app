@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Auth } from 'aws-amplify';
 
 import { AuthContext } from '../utils/AuthContext';
 import { HOME } from '../utils/routes';
@@ -20,11 +21,15 @@ const Login = ({ history }) => {
     updatePassword(e.target.value);
   }
 
-  function handleLogin(e) {
-    e.preventDefault();
-    console.log(email, password);
-    toggleIsAuthenticated(true);
-    history.push(HOME);
+  async function handleLogin(event) {
+    event.preventDefault();
+    try {
+      await Auth.signIn(email, password);
+      toggleIsAuthenticated(true);
+      history.push(HOME);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   return (
