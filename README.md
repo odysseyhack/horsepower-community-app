@@ -1,4 +1,5 @@
-## Horse Power - Community Management Tool
+## Horse Power - Community Management Tool 
+[![BCH compliance](https://bettercodehub.com/edge/badge/odysseyhack/horsepower-community-app?branch=master&token=15bd3a5a7c733a02cf09c6c4306322cb4f4c67d8)](https://bettercodehub.com/)
 
 This repo contains the frontend which, for the demo purposes, will be used for entering the user preferences. It connects to the backend metadata service at the repo [here](https://github.com/odysseyhack/horsepower-community-backend). 
 
