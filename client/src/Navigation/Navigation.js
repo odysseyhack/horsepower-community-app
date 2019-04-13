@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import {
   HOME,
   LOGIN,
-  REGISTER,
+  SIGNUP,
   LOGOUT,
   CREATE_CAR,
   CREATE_COMMUNITY,
   PREFERENCES,
 } from '../utils/routes';
+
+import { AuthContext } from '../utils/AuthContext';
 
 const NavigationAuth = () => (
   <Navbar.Collapse id="basic-navbar-nav">
@@ -37,8 +39,8 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
   <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
     <Nav>
-      <Nav.Link as={Link} to={REGISTER}>
-        Register
+      <Nav.Link as={Link} to={SIGNUP}>
+        Sign up
       </Nav.Link>
       <Nav.Link as={Link} to={LOGIN}>
         Login
@@ -47,14 +49,17 @@ const NavigationNonAuth = () => (
   </Navbar.Collapse>
 );
 
-const Navigation = () => (
-  <Navbar bg="light" expand="lg">
-    <Navbar.Brand as={Link} to={HOME}>
-      HorsePower Community
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    {true ? <NavigationAuth /> : <NavigationNonAuth />}
-  </Navbar>
-);
+const Navigation = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+  return (
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand as={Link} to={HOME}>
+        HorsePower Community
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      {isAuthenticated ? <NavigationAuth /> : <NavigationNonAuth />}
+    </Navbar>
+  );
+};
 
 export default Navigation;

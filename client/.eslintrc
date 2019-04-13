@@ -21,7 +21,8 @@
       {
         "devDependencies": true
       }
-    ]
+    ],
+    "no-console": "off"
   },
   "parserOptions": {
     "ecmaFeatures": {
