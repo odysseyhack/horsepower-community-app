@@ -8,12 +8,13 @@ import {
   LOGOUT,
   CREATE_CAR,
   CREATE_COMMUNITY,
+  PREFERENCES,
 } from '../utils/routes';
 
-const NavigationNonAuth = () => (
+const NavigationAuth = () => (
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link as={Link} to={REGISTER}>
+      <Nav.Link as={Link} to={PREFERENCES}>
         Preferences
       </Nav.Link>
       <NavDropdown title="Create" id="basic-nav-dropdown">
@@ -33,7 +34,7 @@ const NavigationNonAuth = () => (
   </Navbar.Collapse>
 );
 
-const NavigationAuth = () => (
+const NavigationNonAuth = () => (
   <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
     <Nav>
       <Nav.Link as={Link} to={REGISTER}>
