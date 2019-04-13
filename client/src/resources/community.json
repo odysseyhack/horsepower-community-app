@@ -1,0 +1,25 @@
+{
+    "community": {
+        "Community Name": "River Side",
+        "Community Contact": "Mike Shepherd",
+        "Community Contact Phone": "+42 1234 12345",
+        "Community Contact Email": "mike.shepherd@riverside.42",
+        "Available Power Lines": [
+            {"Provider": "Vattenfall", "ID": "Line1", "Capacity": "22KW"},
+            {"Provider": "Vattenfall", "ID": "Line2", "Capacity": "22KW"}
+        ],
+        "Car Chargers": [
+            {"ID":"Charger1", "Type": "Porsche Charger", "Capacity": "22KW"},
+            {"ID": "Charger2", "Type": "Tesla Wallbox", "Capacity": "22KW"},
+            {"ID": "Charger3", "Type": "Tesla Wallbox", "Capacity": "22KW"},
+            {"ID": "Charger4", "Type": "Tesla Wallbox", "Capacity": "22KW"},
+            {"ID": "Charger5", "Type": "Solo Charger", "Capacitry": "7KW"},
+            {"ID": "Charger6", "Type": "Solo Charger", "Capacitry": "7KW"},
+            {"ID": "Charger7", "Type": "Solo Charger", "Capacitry": "7KW"},
+            {"ID": "Charger8", "Type": "Solo Charger", "Capacitry": "7KW"},
+            {"ID": "Charger9", "Type": "Solo Charger", "Capacitry": "7KW"},
+            {"ID": "Charger10", "Type": "Solo Charger", "Capacitry": "7KW"}
+        ],
+        "Solar Systems": "none"
+    }
+}
