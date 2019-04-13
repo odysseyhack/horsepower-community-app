@@ -1,9 +1,10 @@
 pragma solidity ^0.5.2;
+
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Capped.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
-import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/access/roles/MinterRole.sol";
 
-contract VATT is ERC20Detailed, ERC20Capped, Ownable {
+contract VATT is ERC20Detailed, ERC20Capped {
 
     constructor(
         string memory name, 
@@ -14,13 +15,12 @@ contract VATT is ERC20Detailed, ERC20Capped, Ownable {
         ERC20Detailed(name, symbol, decimals) 
         ERC20Capped(cap)
         public
-        onlyOwner 
     {
     }
 
     function updateCap(uint256 newCap)
         public
-        onlyOwner
+        onlyMinter
     {
         _cap = newCap;
     }
@@ -30,9 +30,16 @@ contract VATT is ERC20Detailed, ERC20Capped, Ownable {
      */
     function mint(address account, uint256 value) 
         public
-        onlyOwner
+        onlyMinter
         returns(bool)
     {
         super._mint(account, value);
+    }
+
+    function burn(address account, uint256 value)
+        public  
+        onlyMinter
+    {
+        super._burn(account, value);
     }
 }
