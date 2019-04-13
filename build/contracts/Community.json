@@ -1,0 +1,104 @@
+{
+  "contractName": "Community",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.2+commit.1df8f40c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/user/Desktop/HackNeth/horsepower-community-app/contracts/Community.sol\":\"Community\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/user/Desktop/HackNeth/horsepower-community-app/contracts/Community.sol\":{\"keccak256\":\"0xebe7ed102de582d98d2018e709aeff568ca95106b2a875e8fb383c421cbe690b\",\"urls\":[\"bzzr://1ca6c3cc8facc88aa7acec8e84329423a34525d0464ecc60cfc5ea3e4cc3a424\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820c02cd852053f887d1cb5d35d7f6cdc31b925cc6610b1f3b989c4d2cb80de4a050029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820c02cd852053f887d1cb5d35d7f6cdc31b925cc6610b1f3b989c4d2cb80de4a050029",
+  "sourceMap": "25:25:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:25:0;;;;;;;",
+  "deployedSourceMap": "25:25:0:-;;;;;",
+  "source": "pragma solidity ^0.5.2;\n\ncontract Community {\n  \n}",
+  "sourcePath": "/Users/user/Desktop/HackNeth/horsepower-community-app/contracts/Community.sol",
+  "ast": {
+    "absolutePath": "/Users/user/Desktop/HackNeth/horsepower-community-app/contracts/Community.sol",
+    "exportedSymbols": {
+      "Community": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Community",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "25:25:0"
+      }
+    ],
+    "src": "0:50:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/user/Desktop/HackNeth/horsepower-community-app/contracts/Community.sol",
+    "exportedSymbols": {
+      "Community": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Community",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "25:25:0"
+      }
+    ],
+    "src": "0:50:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.2+commit.1df8f40c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-13T14:03:29.047Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

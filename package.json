@@ -1,0 +1,32 @@
+{
+  "name": "horse-power-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "truffle build",
+    "clean:build": "rimraf build",
+    "clean:install": "rimfraf node_modules && npm install",
+    "migrate:local": "truffle migrate --network development",
+    "migrate:ropsten": "truffle migrate --network ropsten",
+    "lint:js": "eslint test client --fix && prettier test/* client/src client/scripts --write",
+    "lint:sol": "solium -d ./contracts",
+    "start:blockchain": "ganache-cli -e 5000 -d -m 'sea fly custom snake auction window segment brush unfair boat inside recipe'",
+    "test": "truffle test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "ganache-cli": "^6.4.2",
+    "openzeppelin-solidity": "^2.2.0",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "solium": "^1.2.4",
+    "truffle-hdwallet-provider": "^1.0.6"
+  }
+}
