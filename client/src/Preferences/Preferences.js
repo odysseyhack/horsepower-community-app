@@ -35,13 +35,13 @@ const PreferencesList = () => (
             custom
             type="checkbox"
             id="preference-1"
-            label="Preference 1"
+            label="Prefer charging in the morning"
           />
           <Form.Check
             custom
             type="checkbox"
             id="preference-2"
-            label="Preference 2"
+            label="Always charge to max during the night"
           />
         </div>
       </FormGroup>

@@ -8,8 +8,14 @@ import Signup from './Signup';
 import Preferences from './Preferences';
 import NotFound from './NotFound';
 import { AuthProvider } from './utils/AuthContext';
-import { HOME, PREFERENCES, LOGIN, SIGNUP } from './utils/routes';
+import {
+  HOME,
+  PREFERENCES,
+  LOGIN,
+  CREATE_COMMUNITY,
+} from './utils/routes';
 import './App.css';
+import CreateCommunity from './Create/CreateCommunity/CreateCommunity';
 
 const App = () => {
   return (
@@ -21,6 +27,7 @@ const App = () => {
           <Route path={LOGIN} exact component={Login} />
           <Route path={SIGNUP} exact component={Signup} />
           <Route path={PREFERENCES} exact component={Preferences} />
+          <Route path={CREATE_COMMUNITY} exact component={CreateCommunity} />
           <Route component={NotFound} />
         </Switch>
       </Router>
