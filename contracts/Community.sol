@@ -7,7 +7,7 @@ contract Community is Ownable {
     using SafeMath for uint256;
 
     address private _vattContractAddress;
-    mapping (address => uint256) userDebt;
+    mapping (address => uint256) userDiscount;
     VATTinCommunity vatToken;
 
     constructor(address vattContractAddress) public {
@@ -16,7 +16,7 @@ contract Community is Ownable {
     }
 
     function getNonTokenDebt() public view returns(uint256) {
-        return userDebt[msg.sender];
+        return userDiscount[msg.sender];
     }
 
     function updateVattContractAddress(address newAddress) public onlyOwner {
@@ -34,13 +34,13 @@ contract Community is Ownable {
 
     // As VATT is a debt token, a charging by X means, X receives VATT
     function carCharges(address account, uint256 kwh) public onlyOwner {
-        uint256 inDebt = userDebt[account];
-        if (inDebt > 0) {
-            if (inDebt <= kwh) {
-                userDebt[account] = 0;
-                vatToken.mint(account, kwh.sub(inDebt));
+        uint256 discount = userDiscount[account];
+        if (discount > 0) {
+            if (discount <= kwh) {
+                userDiscount[account] = 0;
+                vatToken.mint(account, kwh.sub(discount));
             } else {
-                userDebt[account] = inDebt.sub(kwh);
+                userDiscount[account] = discount.sub(kwh);
             }
         } else {
             vatToken.mint(account, kwh);
@@ -51,13 +51,13 @@ contract Community is Ownable {
         uint256 currentBalance = vatToken.balanceOf(account);
         if (currentBalance > 0) {
             if (currentBalance <= kwh) {
-                userDebt[account] = userDebt[account].add(kwh.sub(currentBalance));
+                userDiscount[account] = userDiscount[account].add(kwh.sub(currentBalance));
                 vatToken.burn(account, currentBalance);
             } else {
                 vatToken.burn(account, kwh);
             }
         } else {
-            userDebt[account] = userDebt[account].add(kwh);
+            userDiscount[account] = userDiscount[account].add(kwh);
         }
     }
 }
