@@ -12,6 +12,7 @@ import {
   HOME,
   PREFERENCES,
   LOGIN,
+  SIGNUP,
   CREATE_COMMUNITY,
 } from './utils/routes';
 import './App.css';
