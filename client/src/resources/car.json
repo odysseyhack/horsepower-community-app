@@ -1,0 +1,16 @@
+{"car": {
+    "VIN": "WWWZZZ-DEMO-0`,
+    "OEM": "Porsche",
+    "Model": "Panamera 4 E-Hybrid",
+    "Max Capacity": "14.1 kwh",
+    "Consumption": "15.9 kwh/100 km",
+    "Charging Speed": [
+          {"Charging Method": "3.7kW", "Supported": true},
+          {"Charging Method": "7kW", "Supported": true},
+          {"Charging Method": "22kW", "Supported": true},
+          {"Charging Method": "50kW", "Supported": false},
+          {"Charging Method": "150kW", "Supported": false}
+         ],
+    "Current Charge": "73%",
+    "Usage Model": {**UsageModel**}
+} }
