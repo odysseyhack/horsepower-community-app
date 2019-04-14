@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Jumbotron,
-  Button,
-  Form,
-  FormGroup,
-  Container,
-  Row,
-} from 'react-bootstrap';
+import { Jumbotron, Button, Col, Container, Row } from 'react-bootstrap';
 
 import withAuthentication from '../../utils/withAuthentication';
 
@@ -26,26 +19,17 @@ const PreferencesConnect = () => (
 const PreferencesList = () => (
   <Container>
     <Row>
-      <h3>Work schedule</h3>
+      <h3>Override: </h3>
     </Row>
-    <Form>
-      <FormGroup>
-        <div className="mb-3">
-          <Form.Check
-            custom
-            type="checkbox"
-            id="preference-1"
-            label="Prefer charging in the morning"
-          />
-          <Form.Check
-            custom
-            type="checkbox"
-            id="preference-2"
-            label="Always charge to max during the night"
-          />
-        </div>
-      </FormGroup>
-    </Form>
+    <Row>
+      <Col>
+        <h5>Charge now!</h5>
+        <h6>Warning: this action may lead to higher energy consumption</h6>
+      </Col>
+      <Col>
+        <Button variant="danger">Charge</Button>
+      </Col>
+    </Row>
   </Container>
 );
 
