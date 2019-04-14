@@ -9,7 +9,7 @@ const PreferencesConnect = () => {
   const connectCar = async () => {
     // web3, accounts
     const result = await connectMetamask();
-    await carRegisters(result.web3, result.accounts[0], 200);
+    await carRegisters(result.web3, result.accounts[0], 800);
   };
 
   return (

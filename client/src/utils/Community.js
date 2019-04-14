@@ -8,7 +8,9 @@ const carRegisters = async (web3, account, kwh) => {
   );
 
   // Registering a car triggers the capacity adjustment
-  await contract.methods.carRegisters(kwh).send({ from: account });
+  await contract.methods
+    .carRegisters(kwh)
+    .send({ from: account, gas: 4712388, gasPrice: 100000000000 });
 };
 
 export default carRegisters;
