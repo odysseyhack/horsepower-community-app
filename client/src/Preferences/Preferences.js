@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 import React from 'react';
 import {
   Jumbotron,
@@ -7,21 +8,32 @@ import {
   Container,
   Row,
 } from 'react-bootstrap';
-
+import connectMetamask from '../utils/getWeb3';
+import carRegisters from '../utils/Community';
 import withAuthentication from '../utils/withAuthentication';
 
-const PreferencesConnect = () => (
-  <Jumbotron>
-    <h1>Preferences</h1>
-    <p>
-      Please connect your car to our service if you want to personalize your
-      preferences. You need to have Metamask installed for this.
-    </p>
-    <p>
-      <Button variant="primary">Connect</Button>
-    </p>
-  </Jumbotron>
-);
+const PreferencesConnect = () => {
+  const connectCar = async () => {
+    // web3, accounts
+    const result = await connectMetamask();
+    await carRegisters(result.web3, result.accounts[0], 200);
+  };
+
+  return (
+    <Jumbotron>
+      <h1>Preferences</h1>
+      <p>
+        Please connect your car to our service if you want to personalize your
+        preferences. You need to have Metamask installed for this.
+      </p>
+      <p>
+        <Button variant="primary" onClick={connectCar}>
+          Connect
+        </Button>
+      </p>
+    </Jumbotron>
+  );
+};
 
 const PreferencesList = () => (
   <Container>

@@ -12,7 +12,7 @@ contract Community is Ownable {
 
     constructor(address vattContractAddress) public {
         _vattContractAddress = vattContractAddress;
-        vatToken = VATTinCommunity(_vattContractAddress);
+        vatToken = VATTinCommunity(vattContractAddress);
     }
 
     function getNonTokenDebt() public view returns(uint256) {
