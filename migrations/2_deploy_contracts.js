@@ -3,6 +3,7 @@ var Community = artifacts.require("./contracts/Community.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(VATT, 'Virtual AuTomobile Token', 'VATT', 3, 2000).then(function() {
+    console.log(VATT.address);
     return deployer.deploy(Community, VATT.address);
   });  
 
