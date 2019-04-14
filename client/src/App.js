@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Navigation from './Navigation';
-import Home from './Home';
-import Login from './Login';
-import Signup from './Signup';
-import Preferences from './Preferences';
-import NotFound from './NotFound';
+import Navigation from './pages/Navigation';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Preferences from './pages/Preferences';
+import NotFound from './pages/NotFound';
 import { AuthProvider } from './utils/AuthContext';
 import {
   HOME,
@@ -16,7 +16,7 @@ import {
   CREATE_COMMUNITY,
 } from './utils/routes';
 import './App.css';
-import CreateCommunity from './Create/CreateCommunity/CreateCommunity';
+import CreateCommunity from './pages/Create/CreateCommunity/CreateCommunity';
 
 const App = () => {
   return (

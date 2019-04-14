@@ -10,9 +10,9 @@ import {
   CREATE_CAR,
   CREATE_COMMUNITY,
   PREFERENCES,
-} from '../utils/routes';
+} from '../../utils/routes';
 
-import { AuthContext } from '../utils/AuthContext';
+import { AuthContext } from '../../utils/AuthContext';
 
 const NavigationAuth = ({ history }) => {
   const { toggleIsAuthenticated } = useContext(AuthContext);

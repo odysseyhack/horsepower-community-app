@@ -8,7 +8,7 @@ import {
   Row,
 } from 'react-bootstrap';
 
-import withAuthentication from '../utils/withAuthentication';
+import withAuthentication from '../../utils/withAuthentication';
 
 const PreferencesConnect = () => (
   <Jumbotron>
