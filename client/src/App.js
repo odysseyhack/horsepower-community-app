@@ -1,15 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Navigation from './Navigation';
-import Home from './Home';
-import Login from './Login';
-import Signup from './Signup';
-import Preferences from './Preferences';
-import NotFound from './NotFound';
+import Navigation from './pages/Navigation';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Preferences from './pages/Preferences';
+import NotFound from './pages/NotFound';
+import Demo from './pages/Demo';
 import { AuthProvider } from './utils/AuthContext';
-import { HOME, PREFERENCES, LOGIN, SIGNUP } from './utils/routes';
+import {
+  HOME,
+  PREFERENCES,
+  LOGIN,
+  SIGNUP,
+  CREATE_COMMUNITY,
+  DEMO,
+} from './utils/routes';
 import './App.css';
+import CreateCommunity from './pages/Create/CreateCommunity/CreateCommunity';
 
 const App = () => {
   return (
@@ -21,6 +30,8 @@ const App = () => {
           <Route path={LOGIN} exact component={Login} />
           <Route path={SIGNUP} exact component={Signup} />
           <Route path={PREFERENCES} exact component={Preferences} />
+          <Route path={CREATE_COMMUNITY} exact component={CreateCommunity} />
+          <Route path={DEMO} exact component={Demo} />
           <Route component={NotFound} />
         </Switch>
       </Router>

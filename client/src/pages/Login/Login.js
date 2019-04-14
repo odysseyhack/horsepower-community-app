@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Auth } from 'aws-amplify';
 
-import { AuthContext } from '../utils/AuthContext';
-import { HOME } from '../utils/routes';
+import { AuthContext } from '../../utils/AuthContext';
+import { HOME } from '../../utils/routes';
 import './Login.css';
 
 // eslint-disable-next-line react/prop-types

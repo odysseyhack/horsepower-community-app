@@ -1,0 +1,14 @@
+.create-community {
+  padding: 20px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.create-community-form {
+  padding: 10px 0px;
+}
+
+

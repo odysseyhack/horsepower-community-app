@@ -10,9 +10,12 @@ import {
   CREATE_CAR,
   CREATE_COMMUNITY,
   PREFERENCES,
-} from '../utils/routes';
+  DEMO,
+} from '../../utils/routes';
 
-import { AuthContext } from '../utils/AuthContext';
+import horse from '../../horse.png';
+
+import { AuthContext } from '../../utils/AuthContext';
 
 const NavigationAuth = ({ history }) => {
   const { toggleIsAuthenticated } = useContext(AuthContext);
@@ -25,6 +28,12 @@ const NavigationAuth = ({ history }) => {
   return (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
+        <Nav.Link as={Link} to={PREFERENCES}>
+          Preferences
+        </Nav.Link>
+        <Nav.Link as={Link} to={DEMO}>
+          Charging Demo
+        </Nav.Link>
         <NavDropdown title="Create" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to={CREATE_COMMUNITY}>
             Community
@@ -33,9 +42,6 @@ const NavigationAuth = ({ history }) => {
             Car
           </NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link as={Link} to={PREFERENCES}>
-          Preferences
-        </Nav.Link>
       </Nav>
       <Nav>
         <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
@@ -62,6 +68,14 @@ const Navigation = ({ history }) => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand as={Link} to={HOME}>
+        <img
+          alt=""
+          src={horse}
+          width="30"
+          height="35"
+          className="d-inline-block align-top"
+        />
+        {'  '}
         HorsePower Community
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,0 +1,14 @@
+.demo-buttons {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-button {
+  margin: 10px;
+}
+
+.demo-info {
+  margin-left: 20px;
+}
